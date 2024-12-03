@@ -1,0 +1,44 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>Custom Payment Gateway</title>\
+    <link rel="stylesheet" href="styles.css">\
+</head>\
+<body>\
+\
+    <div class="payment-container">\
+        <h1>Custom Payment Gateway</h1>\
+        <p>Pay using UPI ID: <strong>9618480093@ybl</strong></p>\
+\
+        <label for="amount">Enter Amount:</label>\
+        <input type="number" id="amount" placeholder="Enter amount to pay" required>\
+\
+        <button id="generate-qr">Generate Payment Options</button>\
+\
+        <div id="qr-section" class="hidden">\
+            <h3>Scan to Pay</h3>\
+            <div id="qrcode"></div>\
+        </div>\
+\
+        <div id="payment-options" class="hidden">\
+            <h3>Or Pay with UPI App</h3>\
+            <button id="pay-phonepe" onclick="redirectToUPI('phonepe')">Pay with PhonePe</button>\
+            <button id="pay-googlepay" onclick="redirectToUPI('googlepay')">Pay with Google Pay</button>\
+            <button id="pay-paytm" onclick="redirectToUPI('paytm')">Pay with Paytm</button>\
+        </div>\
+    </div>\
+\
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>\
+    <script src="script.js"></script>\
+</body>\
+</html>\
+}
